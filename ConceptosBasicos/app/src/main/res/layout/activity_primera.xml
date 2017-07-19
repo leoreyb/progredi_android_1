@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="co.progredi.conceptosbasicos.PrimeraActivity">
+
+    <Button
+        android:id="@+id/btnSegunda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lanzar Segunda ventana" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="resultado" />
+
+</LinearLayout>
