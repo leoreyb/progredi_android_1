@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">VistasPersonalizadas</string>
-    <string name="iniciar_sesion">Iniciar Sesion</string>
-    <string name="text_clave">Clave</string>
-    <string name="text_usuario">Usuario</string>
-</resources>

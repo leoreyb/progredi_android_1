@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">ConceptosBasicos</string>
-    <string name="text_nombre">Name</string>
-    <string name="text_apellido">Surname</string>
-    <string name="text_correo">Email</string>
-    <string name="text_registrar">Register</string>
-</resources>

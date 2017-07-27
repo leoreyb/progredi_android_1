@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">ConceptosBasicos</string>
-    <string name="text_nombre">Nombre</string>
-    <string name="text_apellido">Apellido</string>
-    <string name="text_correo">Correo</string>
-    <string name="text_registrar">Registrar</string>
-</resources>
