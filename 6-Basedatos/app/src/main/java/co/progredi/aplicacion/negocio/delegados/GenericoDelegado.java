@@ -1,6 +1,5 @@
 package co.progredi.aplicacion.negocio.delegados;
 
-import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 import co.progredi.aplicacion.persistencia.basedatos.ConexionBD;
@@ -23,18 +22,28 @@ public abstract class GenericoDelegado {
     }
 
     public void cerrar(SQLiteDatabase cnn) {
-        if (cnn != null) {
-            cnn.close();
+        try {
+            rollBack(cnn);
+            if (cnn != null) {
+                cnn.releaseReference();
+                cnn.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
     public void commit(SQLiteDatabase cnn) {
-        cnn.setTransactionSuccessful();
+        if (cnn.inTransaction()) {
+            cnn.setTransactionSuccessful();
+        }
     }
 
     public void rollBack(SQLiteDatabase cnn) {
         try {
-            cnn.endTransaction();
+            if (cnn.inTransaction()) {
+                cnn.endTransaction();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

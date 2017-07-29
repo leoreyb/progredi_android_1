@@ -1,6 +1,9 @@
 package co.progredi.aplicacion.negocio.delegados;
 
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+import java.util.List;
 
 import co.progredi.aplicacion.persistencia.dao.PersonaDAO;
 import co.progredi.aplicacion.persistencia.entidades.Persona;
@@ -25,8 +28,11 @@ public class PersonaDelegado extends GenericoDelegado {
             cnn = abrir();
             personaDAO = new PersonaDAO(cnn);
             personaDAO.insertar(persona);
+            List<Persona> lista = personaDAO.consultar();
+            Log.d("Consultar", "" + lista);
             commit(cnn);
         } catch (Exception e) {
+            e.printStackTrace();
             rollBack(cnn);
         } finally {
             cerrar(cnn);

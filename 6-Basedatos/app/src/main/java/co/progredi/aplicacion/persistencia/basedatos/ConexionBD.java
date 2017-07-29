@@ -10,9 +10,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class ConexionBD extends SQLiteOpenHelper {
 
-    private static final String NOMBRE_BASE = "";
+    private static final String NOMBRE_BASE = "base";
     private static final int VERSION = 2;
     private static ConexionBD conexion;
+
+    public static final String RUTA_BASE = "/data/data/co.progredi.aplicacion/databases/base";
 
 
     public ConexionBD(Context context) {
@@ -23,7 +25,7 @@ public class ConexionBD extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         //Ejecutar las DDL
         String sql = "CREATE TABLE persona(" +
-                "id_persona INTEGER primary key AUTOINCREMET," +
+                "id_persona INTEGER primary key AUTOINCREMENT," +
                 "nombre text not null," +
                 "apellido text not null," +
                 "correo text," +

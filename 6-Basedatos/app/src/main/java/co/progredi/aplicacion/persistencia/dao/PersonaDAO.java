@@ -3,6 +3,7 @@ package co.progredi.aplicacion.persistencia.dao;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ public class PersonaDAO extends GenericoDAO<Persona> {
         valores.put("celular", entidad.getCelular());
         valores.put("fecha_nacimiento", getDate(entidad.getFechaNacimiento()));
         Long id = cnn.insert(tabla, null, valores);
+        Log.d("Insertar", "" + id);
         entidad.setIdPersona(id);
     }
 

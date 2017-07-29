@@ -32,19 +32,27 @@ public abstract class GenericoDAO<T> {
 
 
     public static Long getLong(Cursor cursor, String columna) {
+        int indice = cursor.getColumnIndex(columna);
+        if (indice == -1) {
+            return null;
+        }
         return cursor.getLong(cursor.getColumnIndex(columna));
     }
 
     public static String getString(Cursor cursor, String columna) {
+        int indice = cursor.getColumnIndex(columna);
+        if (indice == -1) {
+            return null;
+        }
         return cursor.getString(cursor.getColumnIndex(columna));
     }
 
     public static Date getDate(Cursor cursor, String columna) {
-        String fecha = getString(cursor, columna);
-        if (fecha == null) {
-            return null;
-        }
         try {
+            String fecha = getString(cursor, columna);
+            if (fecha == null) {
+                return null;
+            }
             SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
             return formato.parse(fecha);
         } catch (Exception e) {
@@ -53,6 +61,9 @@ public abstract class GenericoDAO<T> {
     }
 
     public static String getDate(Date fecha) {
+        if (fecha == null) {
+            return null;
+        }
         SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         return formato.format(fecha);
     }
