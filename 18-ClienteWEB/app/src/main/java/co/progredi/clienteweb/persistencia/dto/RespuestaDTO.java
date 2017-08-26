@@ -9,6 +9,7 @@ public class RespuestaDTO<T> {
     private int codigo;
     private String mensaje;
     private T datos;
+    private String ruta;
 
     public int getCodigo() {
         return codigo;
@@ -32,5 +33,13 @@ public class RespuestaDTO<T> {
 
     public void setDatos(T datos) {
         this.datos = datos;
+    }
+
+    public String getRuta() {
+        return ruta;
+    }
+
+    public void setRuta(String ruta) {
+        this.ruta = ruta;
     }
 }

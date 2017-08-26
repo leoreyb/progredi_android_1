@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "732581769346",
+    "firebase_url": "https://webservicessoap.firebaseio.com",
+    "project_id": "webservicessoap",
+    "storage_bucket": "webservicessoap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732581769346:android:1609ee41b2db99ae",
+        "android_client_info": {
+          "package_name": "co.progredi.webservicessoap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732581769346-jbd2oe1fdf6o632oje7dt6j4nnvsbv24.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.progredi.webservicessoap",
+            "certificate_hash": "6bf498a9e5a97e4955f4578075226f6adf02468c"
+          }
+        },
+        {
+          "client_id": "732581769346-64652lckj4r7eg84m4rou3s1skbit74g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUFsY2K123se6ni3uHqA9_7WY7TrQucLE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732581769346-64652lckj4r7eg84m4rou3s1skbit74g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
